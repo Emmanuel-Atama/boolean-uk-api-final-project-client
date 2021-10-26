@@ -3,7 +3,15 @@ import { useEffect, useState } from "react";
 export default function App() {
   const [drivers, setDrivers] = useState([])
 
-  console.log("Inside State: ", { drivers})
+  console.log("Inside App State: ", { drivers})
+
+  useEffect(()=>{
+    fetch("http://localhost:3030/drivers")
+      .then((res)=> res.json())
+      .then((driversData) => setDrivers(driversData));
+    
+  },[]);
+  
 
   return(
 <>
