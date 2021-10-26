@@ -29,18 +29,6 @@ ul[class],
 ol[class],
 li {
   margin: 0;
-<<<<<<< HEAD
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-=======
   margin-top: 16px;
 }
 
@@ -76,9 +64,8 @@ select {
   background-color: rgb(139, 179, 87);
 }
 .main-header h1 {
-    width: auto;
-    color: yellow;
->>>>>>> cabc20782190603223f69f8098d398b7dfc2bd77
+  width: auto;
+  color: yellow;
 }
 .center {
   border: 1px solid rgb(235, 225, 225);
