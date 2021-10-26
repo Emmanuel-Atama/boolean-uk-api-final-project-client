@@ -72,3 +72,8 @@ select {
   border-radius: 4px;
   padding: 8px;
 }
+.three-column-grid-expand-center {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 16px;
+}

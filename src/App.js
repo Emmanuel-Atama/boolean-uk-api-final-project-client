@@ -11,9 +11,11 @@ export default function App() {
 <h1>UNTITLED FORMULA ONE</h1>
 <h3><i>...The official formula 1 Web page</i></h3>
 </header>
-<body>
-
-</body>
+<div className="three-column-grid-expand-center">
+  <aside></aside>
+  <main></main>
+  <aside></aside>
+</div>
 
 </>
   )
