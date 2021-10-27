@@ -10,6 +10,7 @@ export default function App() {
   const [cars, setCars] = useState([])
   const [teams, setTeams] = useState([])
   const [sponsors, setSponsors] = useState([])
+  const [hideForm, setHideForm] = useState(true);
 
   console.log("Inside App State: ", { drivers, competitions, racetracks, cars, teams, sponsors})
 
@@ -87,7 +88,11 @@ export default function App() {
 <h3><i>...The official formula 1 Web page</i></h3>
 </header>
 <div className="three-column-grid-expand-center">
-<LeftAside competitions = {competitions} />
+<LeftAside 
+competitions = {competitions}
+hideForm={hideForm}
+setHideForm={setHideForm}
+/>
   <CenterMain drivers = {drivers} />
   <RightAside/>
 </div>
