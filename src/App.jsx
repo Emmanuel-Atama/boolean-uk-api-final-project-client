@@ -18,7 +18,7 @@ export default function App() {
       .then((res)=> res.json())
       .then((driversData) => {
         
-        setDrivers(driversData)
+        setDrivers(driversData.data)
         // console.log("Inside drivers Get Fetch: ", driversData)
       });
     
@@ -29,7 +29,7 @@ export default function App() {
       .then((res)=> res.json())
       .then((competitionData) => {
         
-        setCompetitions(competitionData)
+        setCompetitions(competitionData.data)
         // console.log("Inside competitions Get Fetch: ", competitionData)
       });
     
@@ -40,7 +40,7 @@ export default function App() {
       .then((res)=> res.json())
       .then((racetrackData) => {
         
-        setRacetracks(racetrackData)
+        setRacetracks(racetrackData.data)
         // console.log("Inside racetrack Get Fetch: ", racetrackData)
       });
     
@@ -51,7 +51,7 @@ export default function App() {
       .then((res)=> res.json())
       .then((carData) => {
         
-        setCars(carData)
+        setCars(carData.data)
         // console.log("Inside car Get Fetch: ", carData)
       });
     
@@ -62,7 +62,7 @@ export default function App() {
       .then((res)=> res.json())
       .then((teamData) => {
         
-        setTeams(teamData)
+        setTeams(teamData.data)
         // console.log("Inside team Get Fetch: ", teamData)
       });
     
@@ -73,7 +73,7 @@ export default function App() {
       .then((res)=> res.json())
       .then((sponsorData) => {
         
-        setSponsors(sponsorData)
+        setSponsors(sponsorData.data)
         // console.log("Inside sponsor Get Fetch: ", sponsorData)
       });
     
@@ -87,12 +87,8 @@ export default function App() {
 <h3><i>...The official formula 1 Web page</i></h3>
 </header>
 <div className="three-column-grid-expand-center">
-<LeftAside competitions={competitions} />
-  <CenterMain
-    drivers = {drivers}
-   
-  />
-  <CenterMain/>
+<LeftAside competitions = {competitions} />
+  <CenterMain drivers = {drivers} />
   <RightAside/>
 </div>
 

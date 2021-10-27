@@ -1,18 +1,10 @@
-
+import ListOfDrivers from "./ListOfDrivers";
 
 export default function CenterMain(props) {
-    const { drivers} = props;
-    console.log("Props Inside CenterMain", {props})
-    console.log("drivers", drivers)
+    const { drivers} = props
     return(
         <main className="center-main">
-        <ul>
-            {drivers.map((driver)=>{
-                <li>
-                    {driver.firstName}, {driver.lastName}
-                </li>    
-            })}
-        </ul>
+        <ListOfDrivers drivers ={drivers} />
         </main>
     )
     }

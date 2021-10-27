@@ -1,8 +1,6 @@
 import ListOfCompetition from "./ListOfCompetition";
-
 export default function LeftAside (props) {
 const { competitions } = props
-
     return(
     <aside className="left-aside">
 <header>
