@@ -88,7 +88,10 @@ export default function App() {
 </header>
 <div className="three-column-grid-expand-center">
  <LeftAside/>
-  <CenterMain/>
+  <CenterMain
+    drivers = {drivers}
+   
+  />
   <RightAside/>
 </div>
 
