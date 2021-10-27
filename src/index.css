@@ -96,18 +96,20 @@ select {
   align-items: center;
   gap: 8px;
 }
-.left-aside-header, h2 {
+.left-aside, header, h2 {
   width: auto;
   height: auto;
   border: 1px dotted rgb(38, 47, 172);
   border-radius: 6px;
   text-align: center;
   padding: 2px;
+  background-color: rgb(241, 238, 238);
 }
 .center-main {
   border: 1px dotted rgb(152, 168, 10);
   border-radius: 4px;
   padding: 8px;
+  background-color: rgb(241, 238, 238);
 }
 .right-aside {
   width: auto;
@@ -116,6 +118,7 @@ select {
   border-radius: 6px;
   text-align: center;
   padding: 2px;
+  background-color: rgb(241, 238, 238);
 }
 .create-new-button {
   margin-top: 16px;
