@@ -12,8 +12,3 @@ const { competitions } = props
 </aside>
     )
 }
-{/* <div>
-<button onClick={() => setHideForm(!hideForm)} className="create-new-button">
-              {hideForm ? "New Competition" : "Cancel"}
-              </button>
-</div> */}
