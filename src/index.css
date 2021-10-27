@@ -133,3 +133,32 @@ select {
   border-radius: 8px;
   padding: 8px;
 }
+.form-stack > * + * {
+  margin-top: 0.5rem;
+}
+
+.form-stack > label {
+  display: block;
+}
+
+.form-stack > input {
+  width: auto;
+}
+.center {
+  border: 1px solid rgb(235, 225, 225);
+  border-radius: 4px;
+  padding: 8px;
+}
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.delete-button {
+  margin-top: 16px;
+  width: auto;
+  height: auto;
+  background-color: rgb(130, 175, 85);
+  border-radius: 6px;
+  color: rgb(211, 21, 21);
+}

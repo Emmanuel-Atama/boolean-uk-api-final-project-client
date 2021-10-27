@@ -93,7 +93,7 @@ competitions = {competitions}
 hideForm={hideForm}
 setHideForm={setHideForm}
 />
-  <CenterMain drivers = {drivers} />
+  <CenterMain drivers ={drivers} cars ={cars} setCars ={setCars} />
   <RightAside/>
 </div>
 
