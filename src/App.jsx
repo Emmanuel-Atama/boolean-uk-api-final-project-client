@@ -87,11 +87,12 @@ export default function App() {
 <h3><i>...The official formula 1 Web page</i></h3>
 </header>
 <div className="three-column-grid-expand-center">
- <LeftAside/>
+<LeftAside competitions={competitions} />
   <CenterMain
     drivers = {drivers}
    
   />
+  <CenterMain/>
   <RightAside/>
 </div>
 
