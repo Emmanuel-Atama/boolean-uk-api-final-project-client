@@ -6,6 +6,16 @@
 *::after {
   box-sizing: border-box;
 }
+/*Background Image*/
+
+html {
+  background: url(https://www.newscaststudio.com/wp-content/uploads/2018/03/f1-logo.jpg)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 
 /* Remove default padding */
 ul[class],
@@ -38,7 +48,7 @@ body {
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-  background-color: rgb(214, 210, 210);
+  /* background-color: rgb(214, 210, 210); */
 }
 
 /* Make images easier to work with */
@@ -61,19 +71,62 @@ select {
 }
 .main-header {
   text-align: center;
-  background-color: rgb(139, 179, 87);
+  /* background-color: rgb(238, 183, 183); */
 }
-.main-header h1 {
+.main-header h1, i {
   width: auto;
-  color: yellow;
+  color: rgb(13, 59, 97);
 }
 .center {
   border: 1px solid rgb(235, 225, 225);
   border-radius: 4px;
   padding: 8px;
 }
+.light-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.08);
+}
 .three-column-grid-expand-center {
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   gap: 16px;
+}
+.view-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 8px;
+}
+.left-aside-header, h2 {
+  width: auto;
+  height: auto;
+  border: 1px dotted rgb(38, 47, 172);
+  border-radius: 6px;
+  text-align: center;
+  padding: 2px;
+}
+.center-main {
+  border: 1px dotted rgb(152, 168, 10);
+  border-radius: 4px;
+  padding: 8px;
+}
+.right-aside {
+  width: auto;
+  height: auto;
+  border: 1px dotted rgb(168, 15, 135);
+  border-radius: 6px;
+  text-align: center;
+  padding: 2px;
+}
+.create-new-button {
+  margin-top: 16px;
+  width: auto;
+  height: auto;
+  background-color: rgb(130, 175, 85);
+  border-radius: 6px;
+  color: yellow;
+}
+.border-for-li {
+  border: 1px solid rgb(235, 225, 225);
+  border-radius: 8px;
+  padding: 8px;
 }
