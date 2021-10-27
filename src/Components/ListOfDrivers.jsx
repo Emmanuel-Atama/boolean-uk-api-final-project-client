@@ -1,6 +1,8 @@
 export default function ListOfDrivers (props) {
 //    console.log("Inside ListOfDrivers Props: ", props)
 return (
+    <>
+    <h2>DRIVERS LIST</h2>
     <ul>
             {props.drivers.map((driver, index) => {
                 console.log("Inside drivers map: ", driver)
@@ -13,5 +15,6 @@ return (
                )    
             })}
         </ul>
+        </>
 )
 }
