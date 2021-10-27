@@ -6,8 +6,12 @@ import RightAside from "./Components/RightAside";
 export default function App() {
   const [drivers, setDrivers] = useState([])
   const [competitions, setCompetitions] = useState([])
+  const [racetracks, setRacetracks] = useState([])
+  const [cars, setCars] = useState([])
+  const [teams, setTeams] = useState([])
+  const [sponsors, setSponsors] = useState([])
 
-  console.log("Inside App State: ", { drivers, competitions})
+  console.log("Inside App State: ", { drivers, competitions, racetracks, cars, teams, sponsors})
 
   useEffect(() => {
     fetch("http://localhost:3030/drivers")
@@ -30,6 +34,54 @@ export default function App() {
       });
     
   },[]);
+
+  useEffect(() => {
+    fetch("http://localhost:3030/racetracks")
+      .then((res)=> res.json())
+      .then((racetrackData) => {
+        
+        setRacetracks(racetrackData)
+        // console.log("Inside racetrack Get Fetch: ", racetrackData)
+      });
+    
+  },[]);
+
+  useEffect(() => {
+    fetch("http://localhost:3030/cars")
+      .then((res)=> res.json())
+      .then((carData) => {
+        
+        setCars(carData)
+        // console.log("Inside car Get Fetch: ", carData)
+      });
+    
+  },[]);
+
+  useEffect(() => {
+    fetch("http://localhost:3030/teams")
+      .then((res)=> res.json())
+      .then((teamData) => {
+        
+        setTeams(teamData)
+        // console.log("Inside team Get Fetch: ", teamData)
+      });
+    
+  },[]);
+
+  useEffect(() => {
+    fetch("http://localhost:3030/sponsors")
+      .then((res)=> res.json())
+      .then((sponsorData) => {
+        
+        setSponsors(sponsorData)
+        // console.log("Inside sponsor Get Fetch: ", sponsorData)
+      });
+    
+  },[]);
+
+
+
+
 
   return(
 <>
