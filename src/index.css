@@ -73,7 +73,8 @@ select {
   text-align: center;
   /* background-color: rgb(238, 183, 183); */
 }
-.main-header h1, i {
+.main-header h1,
+i {
   width: auto;
   color: rgb(13, 59, 97);
 }
@@ -96,7 +97,9 @@ select {
   align-items: center;
   gap: 8px;
 }
-.left-aside, header, h2 {
+.left-aside,
+header,
+h2 {
   width: auto;
   height: auto;
   border: 1px dotted rgb(38, 47, 172);
@@ -120,11 +123,12 @@ select {
   padding: 2px;
   background-color: rgb(241, 238, 238);
 }
-.create-new-button {
+.create-new-button,
+.form-apply {
   margin-top: 16px;
   width: auto;
   height: auto;
-  background-color: rgb(130, 175, 85);
+  background-color: rgb(85, 106, 175);
   border-radius: 6px;
   color: yellow;
 }
@@ -144,6 +148,10 @@ select {
 .form-stack > input {
   width: auto;
 }
+.form-stack {
+  padding: 8px;
+}
+
 .center {
   border: 1px solid rgb(235, 225, 225);
   border-radius: 4px;
@@ -158,7 +166,7 @@ select {
   margin-top: 16px;
   width: auto;
   height: auto;
-  background-color: rgb(130, 175, 85);
+  background-color: rgb(200, 210, 230);
   border-radius: 6px;
   color: rgb(211, 21, 21);
 }
