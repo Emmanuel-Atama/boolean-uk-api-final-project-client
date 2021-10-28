@@ -1,16 +1,15 @@
 export default function ListOfSponsors(props) {
-  // const { sponsors, setSponsors } = props;
+ const {sponsors} = props;
 
   console.log("Inside ListOfSponsors Props: ", props);
 
-  const handleDeleteClick = (e) => {
-    e.preventDefault();
-
+  const handleSponsorDelete = (event) => {
+    event.preventDefault();
     const fetchOptions = {
       method: "DELETE",
     };
 
-    fetch("http://localhost:3030/sponsors/2", fetchOptions);
+    fetch(`http://localhost:3030/sponsors/${sponsors.id}`, fetchOptions);
   };
   return (
     <>
@@ -22,7 +21,7 @@ export default function ListOfSponsors(props) {
           return (
             <li key={index} className="border-for-li">
               <h3> {sponsorName} </h3>
-              <button onClick={handleDeleteClick}>Remove</button>
+              <button onClick={handleSponsorDelete}>Remove</button>
             </li>
           );
         })}

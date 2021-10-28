@@ -94,7 +94,6 @@ export default function App() {
         <RightAside
           teams={teams}
           sponsors={sponsors}
-          setSponsors={setSponsors}
         />
       </div>
     </>
