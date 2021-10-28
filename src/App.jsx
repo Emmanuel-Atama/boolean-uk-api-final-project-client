@@ -91,7 +91,7 @@ export default function App() {
           setHideButton={setHideButton}
         />
         <CenterMain drivers={drivers} cars={cars} setCars={setCars} />
-        <RightAside />
+        <RightAside teams = {teams} sponsors = {sponsors} setSponsors = {setSponsors}/>
       </div>
     </>
   );

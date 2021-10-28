@@ -3,7 +3,7 @@ export default function ListOfSponsors (props) {
 const { sponsors, setSponsors } = props;
 
 console.log("Inside ListOfSponsors Props: ", props)
-console.log("Inside ListOfSponsosrs Props 2.0: ", sponsors, setSponsors)
+console.log("Inside ListOfSponsosrs, sponsor, setSponsors: ", sponsors, setSponsors)
 
 const handleDeleteClick = (e) => {
     e.preventDefault()
