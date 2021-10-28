@@ -1,12 +1,18 @@
 import ListOfTeams from "./ListOfTeams";
 import ListOfSponsors from "./ListOfSponsors";
+// import CreateSponsorForm from "./CreateSponsorForm";
 
 export default function RightAside(props) {
   const { teams, sponsors, setSponsors } = props;
   return (
     <aside className="right-aside">
+    <div>  
       <ListOfTeams teams={teams} />
-      <ListOfSponsors sponsors={sponsors} setSponsors={setSponsors} />
+    </div>
+    <div>
+      <ListOfSponsors sponsors={sponsors}  />
+      {/* <CreateSponsorForm sponsors={sponsors} setSponsors={setSponsors}/> */}
+    </div>
     </aside>
   );
 }
