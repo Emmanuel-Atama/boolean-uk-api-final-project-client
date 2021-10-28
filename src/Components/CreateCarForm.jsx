@@ -4,11 +4,12 @@ export default function CreateCarForm(props) {
   const { cars, setCars } = props;
   const [model, setModel] = useState("");
 
-  const handleModel = (e) => {
-    setModel(e.target.value);
+  const handleModel = (event) => {
+    console.log("Inside handlerModel ", event.target.value);
+    setModel(event.target.value);
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
     const carToCreate = {
       model,
@@ -30,6 +31,7 @@ export default function CreateCarForm(props) {
         };
         setCars([...cars, carToAdd]);
       });
+      console.log("Inside handle submit: ", handleSubmit);
   };
 
   return (

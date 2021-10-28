@@ -1,6 +1,5 @@
 export default function ListOfCompetition(props) {
-  // console.log("Inside ListOfCompetition props: ", props)
-  // const { competitions} = props
+  // const competitions = props
   return (
     <ul>
       {props.competitions.map((competition, index) => {

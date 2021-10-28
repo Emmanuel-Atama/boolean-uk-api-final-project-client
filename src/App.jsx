@@ -19,7 +19,7 @@ export default function App() {
     cars,
     teams,
     sponsors,
-    hideButton
+    hideButton,
   });
 
   useEffect(() => {
@@ -91,7 +91,11 @@ export default function App() {
           setHideButton={setHideButton}
         />
         <CenterMain drivers={drivers} cars={cars} setCars={setCars} />
-        <RightAside teams = {teams} sponsors = {sponsors} setSponsors = {setSponsors}/>
+        <RightAside
+          teams={teams}
+          sponsors={sponsors}
+          setSponsors={setSponsors}
+        />
       </div>
     </>
   );

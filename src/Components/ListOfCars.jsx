@@ -10,6 +10,7 @@ export default function ListOfCars(props) {
     //  console.log("Inside delUrl: ", delUrl)
 
     fetch(delUrl, fetchCarModelToDelete);
+    
   };
 
   return (

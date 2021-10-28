@@ -1,4 +1,5 @@
 import CreateCarForm from "./CreateCarForm";
+import CreateDriverForm from "./CreateDriverForm";
 import ListOfCars from "./ListOfCars";
 import ListOfDrivers from "./ListOfDrivers";
 
@@ -11,6 +12,7 @@ export default function CenterMain(props) {
       <div className="two-column-grid">
         <div>
           <ListOfDrivers drivers={drivers} />
+          <CreateDriverForm />
         </div>
         <div>
         <ListOfCars cars={cars} 
@@ -20,7 +22,6 @@ export default function CenterMain(props) {
             cars={cars}
             setCars={setCars}
           />
-       
         </div>
       </div>
     </main>
