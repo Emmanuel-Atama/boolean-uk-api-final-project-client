@@ -1,19 +1,9 @@
 import CreateCarForm from "./CreateCarForm";
+import ListOfCars from "./ListOfCars";
 import ListOfDrivers from "./ListOfDrivers";
 
 export default function CenterMain(props) {
-  const { drivers, cars, setCars } = props;
-
-  const handleCarDelete = (event) => {
-    const fetchCarModelToDelete = {
-      method: "DELETE",
-    };
-    const delUrl = `http://localhost:3030/contacts/${cars.id}`;
-
-    //  console.log("Inside delUrl: ", delUrl)
-
-    fetch(delUrl, fetchCarModelToDelete);
-  };
+  const { drivers, cars, setCars, handleCarDelete } = props;
 
   return (
     <main className="center-main">
@@ -26,21 +16,10 @@ export default function CenterMain(props) {
           <CreateCarForm
             cars={cars}
             setCars={setCars}
-            handleCarDelete={handleCarDelete}
           />
-          <ul>
-            {cars.map((car, index) => {
-              const { model } = car;
-              return (
-                <li key={index} className="border-for-li">
-                  <h3> Car Model: {model} </h3>
-                  <button className="delete-button" onClick={handleCarDelete}>
-                    Delete Car
-                  </button>
-                </li>
-              );
-            })}
-          </ul>
+          <ListOfCars cars={cars} 
+          handleCarDelete={handleCarDelete}
+          />
         </div>
       </div>
     </main>
