@@ -93,8 +93,9 @@ competitions = {competitions}
 hideForm={hideForm}
 setHideForm={setHideForm}
 />
-  <CenterMain drivers = {drivers} />
-  <RightAside/>
+<CenterMain drivers = {drivers} />
+
+<RightAside teams = {teams} sponsors = {sponsors} setSponsors = {setSponsors} />
 </div>
 
 </>
