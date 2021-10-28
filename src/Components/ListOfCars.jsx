@@ -2,6 +2,7 @@ export default function ListOfCars(props) {
   const { cars } = props;
 
   const handleCarDelete = (event) => {
+    console.log("INside handleCarDelete Before: ", event.target.value )
     const fetchCarModelToDelete = {
       method: "DELETE",
     };
@@ -10,6 +11,7 @@ export default function ListOfCars(props) {
      console.log("Inside delUrl: ", delUrl)
 
     fetch(delUrl, fetchCarModelToDelete);
+    console.log("INside handleCarDelete After: ", event.target.value )
     
   };
 
