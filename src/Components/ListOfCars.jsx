@@ -5,7 +5,7 @@ export default function ListOfCars(props) {
     const fetchCarModelToDelete = {
       method: "DELETE",
     };
-    const delUrl = `http://localhost:3030/contacts/${cars.id}`;
+    const delUrl = `http://localhost:3030/cars/${cars.id}`;
 
     //  console.log("Inside delUrl: ", delUrl)
 
