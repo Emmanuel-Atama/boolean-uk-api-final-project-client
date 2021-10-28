@@ -81,7 +81,7 @@ export default function App() {
       <header className="main-header">
         <h1>UNTITLED FORMULA ONE</h1>
         <h3>
-          <i>...The official formula 1 Web page</i>
+          <i>...The Unofficial formula 1 Admin Web page</i>
         </h3>
       </header>
       <div className="three-column-grid-expand-center">
