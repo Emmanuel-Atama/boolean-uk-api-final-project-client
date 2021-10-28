@@ -37,13 +37,13 @@ export default function CreateDriverForm(props) {
     fetch("http://localhost:3030/drivers", fetchDriver)
       .then((res) => res.json())
       .then((newDriver) => {
-        // console.log("Driver POST request: ", newDriver);
+        console.log("Driver POST request: ", newDriver);
         const driverToAdd = {
           ...newDriver,
         };
         setDrivers([...drivers, driverToAdd]);
       });
-    console.log("Inside handle submit: ", handleSubmit);
+    // console.log("Inside handle submit: ", handleSubmit);
   };
   return (
     <form

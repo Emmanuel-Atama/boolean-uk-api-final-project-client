@@ -9,8 +9,6 @@ export default function ListOfDrivers(props) {
             <li key={index} className="border-for-li">
               <h3>Full Names: {firstName} {lastName} </h3>
 
-        
-
               <p>Car Id: {carId}</p>
             </li>
           );
