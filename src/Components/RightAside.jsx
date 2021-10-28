@@ -3,7 +3,7 @@ import ListOfSponsors from "./ListOfSponsors";
 // import CreateSponsorForm from "./CreateSponsorForm";
 
 export default function RightAside(props) {
-  const { teams, sponsors, setSponsors } = props;
+  const { teams, sponsors} = props;
   return (
     <aside className="right-aside">
     <div>  
