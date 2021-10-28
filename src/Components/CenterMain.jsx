@@ -20,9 +20,7 @@ export default function CenterMain(props) {
             cars={cars}
             setCars={setCars}
           />
-          {/* <ListOfCars cars={cars} 
-          handleCarDelete={handleCarDelete}
-          /> */}
+       
         </div>
       </div>
     </main>
