@@ -13,13 +13,16 @@ export default function CenterMain(props) {
           <ListOfDrivers drivers={drivers} />
         </div>
         <div>
+        <ListOfCars cars={cars} 
+          handleCarDelete={handleCarDelete}
+          />
           <CreateCarForm
             cars={cars}
             setCars={setCars}
           />
-          <ListOfCars cars={cars} 
+          {/* <ListOfCars cars={cars} 
           handleCarDelete={handleCarDelete}
-          />
+          /> */}
         </div>
       </div>
     </main>
