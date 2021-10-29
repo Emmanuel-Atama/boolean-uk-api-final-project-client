@@ -1,3 +1,5 @@
+import garbage from '../assets/img/garbage.png';
+
 export default function SingleSponsor(props) {
     const {sponsorName, id} = props.sponsor
     // console.log("Inside Single Sponsor Props: ", id)
@@ -17,9 +19,9 @@ const handleSponsorDelete = (event) => {
 return (
     <li key = {id} className = "border-for-li">
         <h3> Sponsor Model: {sponsorName} </h3>
-        <button className="delete-button" onClick={handleSponsorDelete}>
-        Delete Sponsor
-        </button>
+    <button onClick={handleSponsorDelete}>
+        <div className = "box"><img src = {garbage} alt = "delete icon" className = "garbage-icon"/></div>
+     </button> 
     </li>
 );
 }
