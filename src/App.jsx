@@ -10,9 +10,8 @@ export default function App() {
   const [cars, setCars] = useState([]);
   const [teams, setTeams] = useState([]);
   const [sponsors, setSponsors] = useState([]);
-  const [hideButton, setHideButton] = useState(true);
-  const [editRacetrackForm, setEditRacetrackForm] = useState(true);
-  const [ractrackEdit, setRacetrackEdit] = useState([])
+  const [editRacetrackForm, setEditRacetrackForm] = useState(false);
+  const [racetrackEdit, setRacetrackEdit] = useState({})
 
   console.log("Inside App State: ", {
     drivers,
@@ -21,9 +20,8 @@ export default function App() {
     cars,
     teams,
     sponsors,
-    hideButton,
     editRacetrackForm,
-    ractrackEdit
+    racetrackEdit
   });
 
   useEffect(() => {
@@ -91,9 +89,8 @@ export default function App() {
       <div className="three-column-grid-expand-center">
         <LeftAside
           competitions={competitions}
-          hideButton={hideButton}
-          setHideButton={setHideButton}
           racetracks={racetracks}
+          racetrackEdit={racetrackEdit}
           setRacetracks={setRacetracks}
           setEditRacetrackForm={setEditRacetrackForm}
           editRacetrackForm={editRacetrackForm}

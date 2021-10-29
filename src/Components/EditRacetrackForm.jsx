@@ -1,13 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function EditRacetrackForm(props) {
   const { racetrackEdit, racetracks, SetRacetracks } = props;
 
-  const [trackName, setTrackName] = useState("");
+  const [trackName, setTrackName] = useState("")
   const [countryName, setCountryName] = useState("");
   const [laps, setLaps] = useState(0);
 
   useEffect(() => {
+    console.log("Inside UseEffect: ", racetrackEdit)
     if (racetrackEdit) {
       setTrackName(racetrackEdit.trackName);
       setCountryName(racetrackEdit.countryName);
@@ -36,7 +37,7 @@ export default function EditRacetrackForm(props) {
       laps,
     };
     const fetchRacetrackToUpdate = {
-      method: "PATCH",
+      method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },

@@ -16,12 +16,14 @@ export default function ListOfRacetracks(props) {
             <p>Number of Laps: {laps}</p>
             <button
               onClick={() => {
+                console.log("inside editRacetrackForm: ",editRacetrackForm )
                 setEditRacetrackForm(!editRacetrackForm);
+                console.log("inside setEditRacetrackForm: ",racetrack)
                 setRacetrackEdit(racetrack);
               }}
               className="delete-button"
             >
-              {editRacetrackForm ? "Edit" : "Cancel"}
+              {editRacetrackForm ? "Cancel" : "Edit"}
             </button>
           </li>
         );
