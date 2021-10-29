@@ -1,4 +1,6 @@
 // import delete from './delete.png'
+import garbage from "../assets/img/garbage.png";
+
 export default function SingleCar(props) {
     const { model, id } = props.car
 // console.log("Inside Single Car Props: ", id)
@@ -19,8 +21,8 @@ export default function SingleCar(props) {
           <li key={id} className="border-for-li">
             <h3> Car Model: {model} </h3>
             {/* <img src={delete} alt="" /> */}
-            <button className="delete-button" onClick={handleCarDelete}>
-              Delete Car
+            <button onClick={handleCarDelete}>
+            <div className = "box"><img src = {garbage} alt = "delete icon" className = "garbage-icon"/></div>
             </button>
           </li>
         );

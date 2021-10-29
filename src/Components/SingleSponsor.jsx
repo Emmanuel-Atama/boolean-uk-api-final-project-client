@@ -1,4 +1,4 @@
-import garbage from '../assets/img/garbage.png';
+import garbage from '../assets/img/garbage.img';
 
 export default function SingleSponsor(props) {
     const {sponsorName, id} = props.sponsor
