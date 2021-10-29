@@ -11,6 +11,8 @@ export default function App() {
   const [teams, setTeams] = useState([]);
   const [sponsors, setSponsors] = useState([]);
   const [hideButton, setHideButton] = useState(true);
+  const [editRacetrackForm, setEditRacetrackForm] = useState(true);
+  const [ractrackEdit, setRacetrackEdit] = useState([])
 
   console.log("Inside App State: ", {
     drivers,
@@ -20,6 +22,8 @@ export default function App() {
     teams,
     sponsors,
     hideButton,
+    editRacetrackForm,
+    ractrackEdit
   });
 
   useEffect(() => {
@@ -91,6 +95,9 @@ export default function App() {
           setHideButton={setHideButton}
           racetracks={racetracks}
           setRacetracks={setRacetracks}
+          setEditRacetrackForm={setEditRacetrackForm}
+          editRacetrackForm={editRacetrackForm}
+          setRacetrackEdit={setRacetrackEdit}
         />
         <CenterMain drivers={drivers} cars={cars} setCars={setCars} />
         <RightAside teams={teams} sponsors={sponsors} />

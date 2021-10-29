@@ -1,11 +1,19 @@
-import { useState } from "react";
+import { useEffect } from "react";
 
-export default function CreateRacetrackForm(props) {
-  const { racetracks, setRacetracks } = props;
+export default function EditRacetrackForm(props) {
+  const { racetrackEdit, racetracks, SetRacetracks } = props;
 
   const [trackName, setTrackName] = useState("");
   const [countryName, setCountryName] = useState("");
   const [laps, setLaps] = useState(0);
+
+  useEffect(() => {
+    if (racetrackEdit) {
+      setTrackName(racetrackEdit.trackName);
+      setCountryName(racetrackEdit.countryName);
+      setLaps(racetrackEdit.laps);
+    }
+  }, [racetrackEdit]);
 
   const handleTrackName = (event) => {
     console.log("Inside handlers ", event.target.value);
@@ -22,37 +30,46 @@ export default function CreateRacetrackForm(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const racetrackToCreate = {
+    const racetrackToUpdate = {
       trackName,
       countryName,
       laps,
     };
-    const fetchRacetracks = {
-      method: "POST",
+    const fetchRacetrackToUpdate = {
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(racetrackToCreate),
+      body: JSON.stringify(racetrackToUpdate),
     };
-    fetch("http://localhost:3030/racetracks", fetchRacetracks)
+    const racetrackUrl = `http://localhost:3030/racetracks/${racetrackEdit.id}`;
+
+    fetch(racetrackUrl, fetchRacetrackToUpdate)
       .then((res) => res.json())
-      .then((newRacetrack) => {
-        console.log("Driver POST request: ", newRacetrack);
-        const racetrackToAdd = {
-          ...newRacetrack,
-        };
-        setRacetracks([...racetracks, racetrackToAdd]);
+      .then((updatedRacetrack) => {
+        console.log("Racetrack Patch Request: ", updatedRacetrack);
+
+        const updatedRacetracks = racetracks.map((racetrack) => {
+          if (racetrack.id === updatedRacetrack.id) {
+            return {
+              ...updatedRacetrack,
+            };
+          } else {
+            return racetrack;
+          }
+        });
+        SetRacetracks(updatedRacetracks);
       });
-    console.log("INside HandleSubmit: ", handleSubmit);
   };
+
   return (
     <>
-      <h2 className="h2-special">New Racetrack Form</h2>
+      <h2>Edit Racetrack Form</h2>
       <form
         onSubmit={handleSubmit}
         className="form-stack light-shadow center form-stack"
       >
-        <label htmlFor="trackName">Track Name:</label>
+        <label htmlFor="trackName">Track Name To Update:</label>
         <input
           onChange={handleTrackName}
           id="trackName"
@@ -60,7 +77,7 @@ export default function CreateRacetrackForm(props) {
           type="text"
           value={trackName}
         />
-        <label htmlFor="countryName">Name of Country:</label>
+        <label htmlFor="countryName">Name of Country To Update:</label>
         <input
           onChange={handleCountryName}
           id="countryName"
@@ -68,7 +85,7 @@ export default function CreateRacetrackForm(props) {
           type="text"
           value={countryName}
         />
-        <label htmlFor="laps">Number of Laps:</label>
+        <label htmlFor="laps">Number of Laps To Update:</label>
         <input
           onChange={handleLaps}
           id="laps"
@@ -76,9 +93,9 @@ export default function CreateRacetrackForm(props) {
           type="text"
           value={laps}
         />
-        <div className="form-to-apply">
-          <button onClick={handleSubmit} type="submit">
-            New Racetrack
+        <div >
+          <button onClick={handleSubmit} type="submit" className="form-to-apply">
+            Update Racetrack
           </button>
         </div>
       </form>
