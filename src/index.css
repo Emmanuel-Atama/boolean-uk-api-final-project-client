@@ -180,3 +180,24 @@ h2 {
   width: auto;
   height: auto;
 }
+
+.garbage-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.box {
+  min-width: 25px;
+  min-height: 25px;
+}
+
+/* .two-column-grid {
+  display: grid;
+  gap: 4px;
+  grid-template-columns: auto 1fr;
+} */
+.box :hover {
+  width: 45px;
+  height: 45px;
+  background-color: rgb(211, 21, 21);
+}
