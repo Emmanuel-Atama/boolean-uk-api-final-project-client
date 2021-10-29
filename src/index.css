@@ -72,11 +72,20 @@ select {
 .main-header {
   text-align: center;
   /* background-color: rgb(238, 183, 183); */
+  height: 360px;
 }
 .main-header h1,
 i {
   width: auto;
-  color: rgb(13, 59, 97);
+  color: darkblue;
+}
+
+.main-header img {
+  height: 250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 .center {
   border: 1px solid rgb(235, 225, 225);
@@ -199,5 +208,6 @@ h2 {
 .box:hover {
   width: 35px;
   height: 35px;
-  background-color: crimson;
+  border-style: solid;
+  background-color: red;
 }

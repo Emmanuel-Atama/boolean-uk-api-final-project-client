@@ -3,6 +3,8 @@ import CenterMain from "./Components/CenterMain";
 import LeftAside from "./Components/LeftAside";
 import RightAside from "./Components/RightAside";
 
+import RaceCars from "./assets/img/racecars.PNG" 
+
 export default function App() {
   const [drivers, setDrivers] = useState([]);
   const [competitions, setCompetitions] = useState([]);
@@ -80,11 +82,13 @@ export default function App() {
 
   return (
     <>
-      <header className="main-header">
+      <header  className="main-header">
+        
         <h1>ADMIN WEB PAGE</h1>
         <h3>
           <i>...The Unofficial formula 1 Admin Web page</i>
         </h3>
+        <img src = {RaceCars} alt = "Race Cars"/>
       </header>
       <div className="three-column-grid-expand-center">
         <LeftAside
