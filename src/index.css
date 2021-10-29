@@ -196,8 +196,8 @@ h2 {
   gap: 4px;
   grid-template-columns: auto 1fr;
 } */
-.box :hover {
-  width: 45px;
-  height: 45px;
-  background-color: rgb(211, 21, 21);
+.box:hover {
+  width: 35px;
+  height: 35px;
+  background-color: crimson;
 }
