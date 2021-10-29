@@ -1,6 +1,7 @@
+// import delete from './delete.png'
 export default function SingleCar(props) {
     const { model, id } = props.car
-console.log("Inside Single Car Props: ", id)
+// console.log("Inside Single Car Props: ", id)
     const handleCarDelete = (event) => {
 
         const fetchCarModelToDelete = {
@@ -8,7 +9,7 @@ console.log("Inside Single Car Props: ", id)
         };
         const delUrl = `http://localhost:3030/cars/${id}`;
     
-         console.log("Inside delUrl: ", delUrl)
+        //  console.log("Inside delUrl: ", delUrl)
     
         fetch(delUrl, fetchCarModelToDelete)
         .then((res) => res.json())
@@ -17,6 +18,7 @@ console.log("Inside Single Car Props: ", id)
     return (
           <li key={id} className="border-for-li">
             <h3> Car Model: {model} </h3>
+            {/* <img src={delete} alt="" /> */}
             <button className="delete-button" onClick={handleCarDelete}>
               Delete Car
             </button>

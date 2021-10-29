@@ -35,6 +35,8 @@ export default function CreateCarForm(props) {
   };
 
   return (
+    <>
+    <h2 className="h2-special">New Car Form</h2>
     <form
       onSubmit={handleSubmit}
       className="form-stack light-shadow center form-stack"
@@ -53,5 +55,6 @@ export default function CreateCarForm(props) {
         </button>
       </div>
     </form>
+    </>
   );
 }

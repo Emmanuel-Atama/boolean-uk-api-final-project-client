@@ -5,7 +5,7 @@ export default function ListOfCompetition(props) {
       {props.competitions.map((competition, index) => {
         const { compName, date } = competition;
 
-        console.log("Inside competition map: ", competition);
+        // console.log("Inside competition map: ", competition);
 
         return (
           <li key={index} className="border-for-li">

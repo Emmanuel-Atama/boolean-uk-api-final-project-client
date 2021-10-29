@@ -79,7 +79,7 @@ export default function App() {
   return (
     <>
       <header className="main-header">
-        <h1>UNTITLED FORMULA ONE</h1>
+        <h1>ADMIN WEB PAGE</h1>
         <h3>
           <i>...The Unofficial formula 1 Admin Web page</i>
         </h3>
@@ -89,12 +89,11 @@ export default function App() {
           competitions={competitions}
           hideButton={hideButton}
           setHideButton={setHideButton}
+          racetracks={racetracks}
+          setRacetracks={setRacetracks}
         />
         <CenterMain drivers={drivers} cars={cars} setCars={setCars} />
-        <RightAside
-          teams={teams}
-          sponsors={sponsors}
-        />
+        <RightAside teams={teams} sponsors={sponsors} />
       </div>
     </>
   );

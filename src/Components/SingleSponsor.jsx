@@ -1,6 +1,6 @@
 export default function SingleSponsor(props) {
     const {sponsorName, id} = props.sponsor
-    console.log("Inside Single Sponsor Props: ", id)
+    // console.log("Inside Single Sponsor Props: ", id)
 
 const handleSponsorDelete = (event) => {
     const fetchOptions = {
@@ -8,7 +8,7 @@ const handleSponsorDelete = (event) => {
     };
     const deleteUrl = `http://localhost:3030/sponsors/${id}`;
 
-    console.log("Inside deleteURL: ", deleteUrl)
+    // console.log("Inside deleteURL: ", deleteUrl)
 
     fetch(deleteUrl, fetchOptions)
         .then((res) => res.json())

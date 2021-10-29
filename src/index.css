@@ -170,3 +170,13 @@ h2 {
   border-radius: 6px;
   color: rgb(211, 21, 21);
 }
+.h2-special {
+  background-color: rgb(243, 8, 8);
+  width: auto;
+  height: auto;
+}
+.h2-special-header {
+  background-color: rgb(78, 71, 172);
+  width: auto;
+  height: auto;
+}

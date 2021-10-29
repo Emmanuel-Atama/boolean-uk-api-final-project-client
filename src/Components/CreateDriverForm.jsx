@@ -46,39 +46,42 @@ export default function CreateDriverForm(props) {
     // console.log("Inside handle submit: ", handleSubmit);
   };
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="form-stack light-shadow center form-stack"
-    >
-      <label htmlFor="firstName">FirstName:</label>
-      <input
-        onChange={handleFirstName}
-        id="firstName"
-        name="firstName"
-        type="text"
-        value={firstName}
-      />
-      <label htmlFor="lastName">LastName:</label>
-      <input
-        onChange={handleLastName}
-        id="lastName"
-        name="lastName"
-        type="text"
-        value={lastName}
-      />
-      <label htmlFor="carId">Car Id:</label>
-      <input
-        onChange={handleCarId}
-        id="carId"
-        name="carId"
-        type="text"
-        value={carId}
-      />
-      <div className="form-to-apply">
-        <button onClick={handleSubmit} type="submit">
-          Add Driver
-        </button>
-      </div>
-    </form>
+    <>
+      <h2 className="h2-special">New Driver Form</h2>
+      <form
+        onSubmit={handleSubmit}
+        className="form-stack light-shadow center form-stack"
+      >
+        <label htmlFor="firstName">FirstName:</label>
+        <input
+          onChange={handleFirstName}
+          id="firstName"
+          name="firstName"
+          type="text"
+          value={firstName}
+        />
+        <label htmlFor="lastName">LastName:</label>
+        <input
+          onChange={handleLastName}
+          id="lastName"
+          name="lastName"
+          type="text"
+          value={lastName}
+        />
+        <label htmlFor="carId">Car Id:</label>
+        <input
+          onChange={handleCarId}
+          id="carId"
+          name="carId"
+          type="text"
+          value={carId}
+        />
+        <div className="form-to-apply">
+          <button onClick={handleSubmit} type="submit">
+            Add Driver
+          </button>
+        </div>
+      </form>
+    </>
   );
 }

@@ -8,20 +8,15 @@ export default function CenterMain(props) {
 
   return (
     <main className="center-main">
-      <h2>DRIVERS LIST AND CAR MODELS</h2>
+      <h2 className="h2-special-header">DRIVERS LIST AND CAR MODELS</h2>
       <div className="two-column-grid">
         <div>
           <ListOfDrivers drivers={drivers} />
           <CreateDriverForm />
         </div>
         <div>
-        <ListOfCars cars={cars} 
-          handleCarDelete={handleCarDelete}
-          />
-          <CreateCarForm
-            cars={cars}
-            setCars={setCars}
-          />
+          <ListOfCars cars={cars} handleCarDelete={handleCarDelete} />
+          <CreateCarForm cars={cars} setCars={setCars} />
         </div>
       </div>
     </main>
